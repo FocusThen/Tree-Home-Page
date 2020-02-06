@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Vidaloka|Kaushan+Script&display=swap");
+
+$clr--accent: #028090;
+$clr--dark: #023c40;
+
+$ff-primary: "Raleway", sans-serif;
+$ff-secondary: "Vidaloka", serif;
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $ff-secondary;
+  font-weight: normal;
+  margin: 0;
+}
+h1 {
+  font-size: 5em;
+}
+
+p {
+  line-height: 2.5em;
+}
+
+body {
+  margin: 40px;
+  font-family: $ff-primary;
+  font-weight: 600;
+
+  color: $clr--dark;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  background: url("../img/wild.jpg") center center no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    padding: 0;
+    li {
+      list-style-type: none;
+      font-size: 1.1em;
+      margin-left: 3em;
+    }
+  }
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  path {
+    fill: $clr--accent;
+  }
+}
+
+.footer {
+  padding: 0.5em 0;
+  font-size: 2em;
+  font-family: "Kaushan Script", cursive;
+  grid-area: footer;
+  color: $clr--accent;
+}
+
+.wrapper {
+  margin-left: 60px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 140px);
+  display: grid;
+  grid-gap: 10px 4em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+    "....... header header"
+    "sidebar content content"
+    ".......  footer  footer";
+}
+
+.sidetext {
+  color: $clr--accent;
+  position: fixed;
+  left: -200px;
+  top: 360px;
+  transform: rotate(90deg);
+  span,
+  svg {
+    display: inline-block;
+  }
+  svg {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Vidaloka|Kaushan+Script&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Vidaloka", serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+p {
+  line-height: 2.5em;
+}
+
+body {
+  margin: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #023c40;
+}
+
+.sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: content;
+  background: url("../img/wild.jpg") center center no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.header ul li {
+  list-style-type: none;
+  font-size: 1.1em;
+  margin-left: 3em;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.logo path {
+  fill: #028090;
+}
+
+.footer {
+  padding: 0.5em 0;
+  font-size: 2em;
+  font-family: "Kaushan Script", cursive;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  color: #028090;
+}
+
+.wrapper {
+  margin-left: 60px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 140px);
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px 4em;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 80px 1fr 80px;
+      grid-template-rows: 80px 1fr 80px;
+      grid-template-areas: "....... header header" "sidebar content content" ".......  footer  footer";
+}
+
+.sidetext {
+  color: #028090;
+  position: fixed;
+  left: -200px;
+  top: 360px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.sidetext span,
+.sidetext svg {
+  display: inline-block;
+}
+
+.sidetext svg {
+  vertical-align: middle;
+}
+/*# sourceMappingURL=main.css.map */
